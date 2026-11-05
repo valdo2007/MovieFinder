@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVmaze Series SPA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation de l'application (SPA) -->
+  <nav class="nav-bar">
+    <button id="navSearchBtn" class="nav-btn active">Recherche</button>
+    <button id="navFavBtn" class="nav-btn">Mes Favoris (<span id="favCount">0</span>)</button>
+  </nav>
+
+  <main>
+    <!-- Vue 1 : Recherche -->
+    <section id="searchView" class="view">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Rechercher une série...">
+        <button id="searchBtn">Rechercher</button>
+      </div>
+      <p id="error" class="error-msg"></p>
+      <div id="results" class="grid-container"></div>
+    </section>
+
+    <!-- Vue 2 : Favoris -->
+    <section id="favorisView" class="view" style="display: none;">
+      <h2>Mes Séries Favorites</h2>
+      <div id="favorisResults" class="grid-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
